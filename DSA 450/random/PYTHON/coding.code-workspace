@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "DSA 450",
+			"path": "../.."
+		},
+		{
+			"name": "Leetcode",
+			"path": "../../../leetcode/Leetcode"
+		}
+	],
+	"settings": {}
+}
