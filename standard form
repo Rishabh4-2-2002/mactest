@@ -1,0 +1,22 @@
+##standard form
+
+format short
+clc
+clear all
+
+%% standard form code
+A=[ 1 2 ; 1 1 ; 0 1];
+B=[2000 ; 1500 ; 6000];
+C=[3,5]; 
+
+%%phase 2 identify inequaity
+inequi = [ 0 0 1 ];
+
+s=eye(size(A,1));
+ind=find(inequi>0)
+s(ind,:) = -s(ind,:);
+
+objfun = array2table(C);
+mat = [A s B];
+constraints = array2table(mat)
+constraints.Properties.VariableNames(1:size(mat,2)) = {'x1','x2','s1','s2','s3','sol'}
